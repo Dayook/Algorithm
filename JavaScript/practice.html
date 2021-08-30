@@ -1,0 +1,44 @@
+<HTML>
+  <head>
+    
+
+  </head>
+  <body>
+    <script href="./UDWR.js"> 
+let n = 5;
+let plans = ["R", "R", "R", "U", "D", "D"];
+
+let move_types = ["U", "D", "L", "R"];
+let dx = [0, 0, -1, 1];
+let dy = [1, -1, 0, 0];
+let location_x = 1;
+let location_y = 1;
+let nx = 0;
+let ny = 0;
+
+function move_plan(space, plans) {
+  for (var i in plans) {
+    let j = 0;
+    while (j < move_types.length) {
+      if (move_types[j] == plans[i]) {
+        nx = location_x + dx[j];
+        ny = location_y + dy[j];
+        break;
+      }
+      j += 1;
+    }
+    console.log(location_x, location_y);
+    if ( nx < 1 || ny < 1 || nx > n || ny > n )
+     {
+       continue;
+      }
+    location_x = nx;
+    location_y = ny;
+  }
+
+  return [location_x, location_y];
+}
+console.log("지도 문제");
+console.log(move_plan(n, plans));
+    </script>
+  </body>
