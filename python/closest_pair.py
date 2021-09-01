@@ -3,7 +3,7 @@ from math import sqrt
 
 # 두 좌표의 직선 거리를 계산해주는 함수
 def distance(store1, store2):
-  return sqrt((store1[0] - store2[0]) ** 2 + (store1[1] - store2[1]) **)
+  return sqrt((store1[0] - store2[0]) ** 2 + (store1[1] - store2[1]) ** 2)
 
 
 # 좌표 리스트를 파라미터로 받고, 리스트 안에서 가장 가까운 두 매장을 리턴하는 함수를 완성하시오
